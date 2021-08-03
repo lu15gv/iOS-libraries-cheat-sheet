@@ -45,15 +45,16 @@
 - Library:
   - ***Xcode > File > New Project > Static Library***
   - You can change from static to dynamic in ***Build Settings > Mach-O Type***
-  - Set ***Build Settings > Skip Instal > No***
+  - Set ***Build Settings > Skip Install > No***. This will move your library from the DerivedData to the Archive.
   - Archive it for the desire architecture (simulator or Any iOS Device), and you will find the library in the products folder inside the archive
+  - If you can't archive it for simulator in Xcode, use `xcodebuild` command in the terminal to do it.
 
 - Framework:
   - ***Xcode > File > New Project > Framework***
   - You can change from dynamic to static in ***Build Settings > Mach-O Type***
-  - Set ***Build Settings > Skip Instal > No***
+  - Set ***Build Settings > Skip Install > No***.This will move your framework from the DerivedData to the Archive.
   - Archive it for the desire architecture (simulator or Any iOS Device), and you will find the framework in the products folder inside the archive
-  - If you can't archive it for simulator in Xcode, use `xcodebuild` command in terminal to do it.
+  - If you can't archive it for simulator in Xcode, use `xcodebuild` command in the terminal to do it.
 
 - XCFramework:
   - You will need two libraries or frameworks built for different architectures.
