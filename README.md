@@ -43,15 +43,15 @@
 ## How to build them
 
 - Library:
-  - Xcode > File > New Project > Static Library
-  - You can change from static to dynamic in Build Settings > Mach-O Type
-  - Set Build Settings > Skip Instal > No
+  - ***Xcode > File > New Project > Static Library***
+  - You can change from static to dynamic in ***Build Settings > Mach-O Type***
+  - Set ***Build Settings > Skip Instal > No***
   - Archive it for the desire architecture (simulator or Any iOS Device), and you will find the library in the products folder inside the archive
 
 - Framework:
-  - Xcode > File > New Project > Framework
-  - You can change from dynamic to static in Build Settings > Mach-O Type
-  - Set Build Settings > Skip Instal > No
+  - ***Xcode > File > New Project > Framework***
+  - You can change from dynamic to static in ***Build Settings > Mach-O Type***
+  - Set ***Build Settings > Skip Instal > No***
   - Archive it for the desire architecture (simulator or Any iOS Device), and you will find the framework in the products folder inside the archive
   - If you can't archive it for simulator in Xcode, use `xcodebuild` command in terminal to do it.
 
@@ -96,6 +96,10 @@ use_frameworks! :linkage => :static
 ```
 
 If you don't have CocoPods `1.9.0`, you will have to use `use_modular_headers!` instead of `use_frameworks!`. That will generate static libraries instead of frameworks.
+
+## Library Evolution
+
+Set ***Build Settings > Build Libraries for distribution > Yes***. This allows you to use your library/framework in new versions of Xcode or Swift compiler without having to recompile it. Try to use it whenever you can, but sometimes this feature can lead in problems when importing your library, if that's the case, disable this feature.
 
 ---
 Special thanks to my teammate, [Omar Zuñiga](https://github.com/omarzl). Much of what is here was drawn from his brain.
