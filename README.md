@@ -81,4 +81,18 @@
     "path/to/arm64.a" \
     -output output/path/myFatLibrary.a
     ```
-    
+ ## CocoaPods
+ 
+ By default, CocoPods uses dyamic frameworks, if you want the advantages of static libraries, change this line in your podfile:
+ 
+```ruby
+use_frameworks!
+```
+
+For
+
+```ruby
+use_frameworks! :linkage => :static
+```
+
+If you don't have CocoPods `1.9.0`, you will have to use `use_modular_headers!` instead of `use_frameworks!`
