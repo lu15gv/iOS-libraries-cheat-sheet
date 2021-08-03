@@ -38,7 +38,7 @@
 | Link time   | When the binary is generated.<br>When yo do the Archive | At run time.<br>Every time you open the app                         |
 | Launch time | Faster                                               | Slower                                                           |
 | Size        | Smaller (as long as -Objc flag is not present)       | Bigger (not always)                                                          |
-| dSYM        | One for the whole app                                | One for the app, and one more for each dynamic library/framework |
+| dSYM        | One for the whole app                                | One for the main target, and one more for each dynamic library/framework |
 
 ## How to build them
 
