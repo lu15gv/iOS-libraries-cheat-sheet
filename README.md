@@ -10,7 +10,7 @@
   - It's a directory structure that contains a binary, it's module and/or headers. It works for a single architecture.
 
 - XCFramework:
-  - It's a directory structure that contains frameworks or libraries for different architectures. It is Apple's newest way of packaging frameworks/libraries. 
+  - It's a directory structure that contains frameworks or libraries for different architectures. It is Apple's newest way of managing multiple architectures. 
 
 - Fat library/framework:
   - It's the same as a library or a framework, but there are several architectures embedded into the binary. It's the old way of managing multiple architectures.
