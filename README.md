@@ -83,7 +83,7 @@
     ```
  ## CocoaPods
  
- By default, CocoPods uses dyamic frameworks, if you want to get the advantages of static libraries, change this line in your podfile:
+ By default, CocoaPods uses dyamic frameworks, if you want to get the advantages of static libraries, change this line in your podfile:
  
 ```ruby
 use_frameworks!
