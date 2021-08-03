@@ -95,4 +95,7 @@ for
 use_frameworks! :linkage => :static
 ```
 
-If you don't have CocoPods `1.9.0`, you will have to use `use_modular_headers!` instead of `use_frameworks!`
+If you don't have CocoPods `1.9.0`, you will have to use `use_modular_headers!` instead of `use_frameworks!`. That will generate static libraries instead of frameworks.
+
+---
+Special thanks to my teammate, [Omar Zuñiga](https://github.com/omarzl). Much of what is here was drawn from his brain.
