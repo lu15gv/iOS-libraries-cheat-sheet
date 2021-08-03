@@ -10,9 +10,9 @@
   - It's a directory structure that contains a binary, it's module and/or headers. It works for a single architecture.
 
 - XCFramework:
-  - It's a directory structure that contains frameworks or libraries for different architectures. It is Apple's newest way of packaging Frameworks/libraries. 
+  - It's a directory structure that contains frameworks or libraries for different architectures. It is Apple's newest way of packaging frameworks/libraries. 
 
-- Fat library/Framework:
+- Fat library/framework:
   - It's the same as a library or a framework, but there are several architectures embedded into the binary. It's the old way of managing multiple architectures.
 
 > :warning: If you decide to use fat libraries/frameworks instead of XCFrameworks, you must remove simulator architecure before send it to the AppStore, or you binary will be rejected.
@@ -89,7 +89,7 @@
 use_frameworks!
 ```
 
-For
+for
 
 ```ruby
 use_frameworks! :linkage => :static
