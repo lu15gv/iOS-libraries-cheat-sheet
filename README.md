@@ -102,5 +102,25 @@ If you don't have CocoPods `1.9.0`, you will have to use `use_modular_headers!` 
 
 Set ***Build Settings > Build Libraries for distribution > Yes***. This allows you to use your library/framework in new versions of Xcode or Swift compiler without having to recompile it. Try to use it whenever you can, but sometimes this feature can lead in problems when importing your library, if that's the case, disable this feature.
 
+## WWDC reference:
+
+[Optimizing App Launch](https://developer.apple.com/videos/play/wwdc2019/423/)
+
+[Binary Frameworks in Swift](https://developer.apple.com/videos/play/wwdc2019/416/)
+
+## Useful commands
+
+Print symbols of a binary: `nm <binary path>`
+
+Print symbols of a swift binary (with demangle): `nm <binary path> | xcrun swift-demangle`
+
+Print undefined symbols of a binary (with demangle): `nm --undefined-only <binary path>`
+
+Extract Mach-O files from a static library: `ar -xv <library path>`
+
+View static binary architectures: `lipo -info <binary path>`
+
+View dynamic binary architectures: `file <binary path>`
+
 ---
-Special thanks to my teammate, [Omar Zuñiga](https://github.com/omarzl). Much of what is here was drawn from his brain.
+Special thanks to my teammate, [Omar Zuñiga](https://github.com/omarzl).
